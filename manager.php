@@ -1,7 +1,7 @@
 <?php
 require_once  'vendor/autoload.php';
-require_once  'place/place_one.php';
-require_once  'place/place_two.php';
+require_once  'place_one.php';
+require_once  'place_two.php';
 require_once  'Factory.php';
 
 
