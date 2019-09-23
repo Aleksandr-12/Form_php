@@ -3,9 +3,10 @@
 class db_class{
 	private $config;
 	private static $db = null;
-	private $mysqli;
+	private $pdo;
 	public function __construct() {
-		$this->mysqli = new PDO('mysql:dbname=form_test;host=localhost', 'root', '');
+		$this->pdo = new PDO('mysql:dbname=form_test;host=localhost', 'root', '');
+		
 	}
 	
 	public static function getDB() {
@@ -21,7 +22,7 @@ class db_class{
 		} 
 		$query = substr($query, 0, -1);
 		$query = substr($query, 0, -1);
-		$result_pdo = $this->mysqli->prepare($query);
+		$result_pdo = $this->pdo->prepare($query);
 		$result_pdo->execute($data);	
 	}
 	
